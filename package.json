@@ -1,0 +1,32 @@
+{
+  "name": "14-node-express-handlebars",
+  "version": "1.0.0",
+  "description": "Burger logger, MySQL, Node, Express, Handlebars, and an ORM",
+  "main": "public",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeugimAtreides/14-Node-Express-Handlebars.git"
+  },
+  "keywords": [
+    "jQuery",
+    "JavaScript",
+    "mySQL",
+    "Node",
+    "Express",
+    "Handlebars",
+    "CRUD"
+  ],
+  "author": "M.E. Villarreal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeugimAtreides/14-Node-Express-Handlebars/issues"
+  },
+  "homepage": "https://github.com/LeugimAtreides/14-Node-Express-Handlebars#readme",
+  "dependencies": {
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1"
+  }
+}
