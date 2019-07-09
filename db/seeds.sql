@@ -1,14 +1,16 @@
 
-use burger_db
+use burger_db;
 
-INSERT INTO burgers (burger_name, devoured) VALUES ('Cheese Burger', FALSE);
+INSERT INTO burgers (burger_name) VALUES ('Cheese Burger');
 
-INSERT INTO burgers (burger_name, devoured) VALUES ('Veggie Burger', FALSE);
+INSERT INTO burgers (burger_name) VALUES ('Veggie Burger');
 
-INSERT INTO burgers (burger_name, devoured) VALUES ('Ham Burger', FALSE);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Ham Burger', true);
 
-INSERT INTO burgers (burger_name, devoured) VALUES ('Double Quarter-pounder with Cheese', FALSE);
+INSERT INTO burgers (burger_name)  VALUES ('Double Quarter-pounder with Cheese');
 
-INSERT INTO burgers (burger_name, devoured) VALUES ('The Baconator', FALSE);
+INSERT INTO burgers (burger_name, devoured) VALUES ('The Baconator', true);
 
-INSERT INTO burgers (burger_name, devoured) VALUES ('Conflicted Burger', FALSE);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Conflicted Burger', true);
+
+select * FROM burgers;
