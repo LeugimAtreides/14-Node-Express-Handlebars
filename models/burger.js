@@ -11,7 +11,7 @@ var burger = {
         });
 
     },
-    
+
     // runs the function that inserts a value into the database
     insertOne: function(cols, vals, cb) {
         orm.insertOne("burgers", cols, vals, function(res){
@@ -24,6 +24,12 @@ var burger = {
         orm.updateOne("burgers", objColVals, condition, function(res){
             cb(res);
         });
+    },
+
+    deleteOne: function(condition, cb){
+        orm.deleteOne("burgers", condition, function(res){
+            cb(res);
+        })
     }
 
 

@@ -43,13 +43,6 @@ function objToSql(ob) {
 
 }
 
-// console.log()
-// var test = {
-//     potato: "pants on fire"
-// }
-
-// console.log(objToSql(test))
-
 var orm = {
 
     // function to select every item in the database
@@ -104,7 +97,21 @@ var orm = {
 
                 cb(result);
             });
-        }
+        },
+
+    deleteOne: function(table, condition, cb){
+        var queryString = "DELETE FROM " + table;
+
+        queryString += " WHERE "
+        queryString += condition;
+
+        console.log(queryString);
+        connection.query(queryString, function(err, result){
+            if (err) throw err;
+
+            cb(result);
+        })
+    }
 }
 
 
