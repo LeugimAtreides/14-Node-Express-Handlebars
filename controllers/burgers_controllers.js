@@ -2,7 +2,7 @@ var express = require("express");
 
 var router = express.Router();
 
-var burger = require("../models/burger");
+var burger = require("../models/burger.js");
 
 // the get route obtains the data for the entire table and it is updated dynamically as changes are made
 router.get("/", function(req, res) {
@@ -20,7 +20,7 @@ router.post("/api/burgers", function(req, res){
     burger.insertOne([
         "burger_name", "devoured"
     ], [
-        req.body.burger, req.body.devoured
+        req.body.burger_name, req.body.devoured
     ], function(result) {
         // send back the ID of the new burger
         res.json({ id: result.insertId })

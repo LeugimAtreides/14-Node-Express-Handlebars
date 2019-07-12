@@ -1,15 +1,8 @@
 import { DEFAULT_ENCODING } from "crypto";
 
-$(document).ready(function(){
+$(function(){
 
     $(".change-devoured").on("click", function(event) {
-
-        // Prevent form resubmission
-        event.preventDefault();
-
-        // present GIPHY
-        displayBurgerGIF();
-
         // declare the data id
         var id = $(this).data("id");
 
@@ -40,8 +33,8 @@ $(document).ready(function(){
         // Creates an object that holds the name of the new burger and its status as devoured or not
         var newBurger = {
 
-            burger_name: $("#new-burger").val().trim(),
-            devoured: $("[burger_name = devoured]:checked").val().trim()
+            burger_name: $("bu").val().trim(),
+            devoured: $("[burger_name=devoured]:checked").val().trim()
 
         };
 
@@ -65,20 +58,10 @@ $(document).ready(function(){
         $.ajax("/api/burgers/" + id, {
             type: "DELETE"
         }).then(function(){
-            console.log("Deleted burger " + id);
+            console.log("Deleted burger ", id);
             location.reload();
         })
     });
 
-    // function to display a giphy request
-   function displayBurgerGIF(){
-    //    send giphy request
-    $.ajax("https://api.giphy.com/v1/gifs/search?api_key=ED4tN7E9IwOCjDlwDrUO9h9GcL7hoZbA&q=burgers&limit=1&offset=0&rating=PG&lang=en",
-    {
-        type: "GET",
-    }).then(function(){
-        console.log("Succesful GIF posting")
-    })
-   }
 
 })
