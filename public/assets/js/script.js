@@ -1,5 +1,3 @@
-import { DEFAULT_ENCODING } from "crypto";
-
 $(function(){
 
     $(".change-devoured").on("click", function(event) {
