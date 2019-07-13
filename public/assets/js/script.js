@@ -15,13 +15,14 @@ $(function(){
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newDevouredState
-        }.then(function(){
+        }).then(
+            function() {
             console.log("Set the burger state to ", newDevouredState);
 
             // Reload the page to get the updated list
             location.reload();
 
-        }))
+        })
 
     });
 
