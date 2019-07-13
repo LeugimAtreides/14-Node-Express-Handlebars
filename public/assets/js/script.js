@@ -32,7 +32,7 @@ $(function(){
         // Creates an object that holds the name of the new burger and its status as devoured or not
         var newBurger = {
             burger_name: $("#bu").val().trim(),
-            devoured: $("[burger_name=devoured]:checked").val().trim()
+            devoured: $("[name=devoured]:checked").val().trim()
 
         };
 
