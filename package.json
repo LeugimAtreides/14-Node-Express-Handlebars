@@ -4,7 +4,7 @@
   "description": "In this assignment, I created a burger logger with MySQL, Node, Express, Handlebars and ORMs. I followed the MVC design pattern; used Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1",
     "mysql2": "^1.6.5"
